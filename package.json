@@ -13,16 +13,8 @@
     "express": "^4.17.3",
     "gun": "^0.2020.1235"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=10.0.0"
   }
 }
