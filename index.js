@@ -1,12 +1,11 @@
-// react-scripts 5.0.0 does not support express = webpack 5 default imports
-const express = require("express");
-const GUN = require("gun");
-const app = express();
-const port = 443;
-app.use(GUN.serve);
+const gunLib = require("gun");
 
-const server = app.listen(port, () => {
-  console.log(`Example app listening at https://${process.env.PUBLIC_URL}:${port}`);
+const server = require("http")
+  .createServer()
+  .listen(8080, () => {
+    console.log("Relay peer started on port " + 8080 + " with /gun");
+  });
+
+const gun = gunLib({
+  web: server,
 });
-
-GUN({ web: server });
