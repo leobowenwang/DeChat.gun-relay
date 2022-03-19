@@ -2,11 +2,11 @@
 const express = require("express");
 const GUN = require("gun");
 const app = express();
-const port = 3030;
+const port = 443;
 app.use(GUN.serve);
 
 const server = app.listen(port, () => {
-  console.log(`Example app listening at http://${process.env.PUBLIC_URL}:${port}`);
+  console.log(`Example app listening at https://${process.env.PUBLIC_URL}:${port}`);
 });
 
 GUN({ web: server });
